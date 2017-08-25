@@ -6,10 +6,15 @@
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
     <script>
+        const PADDLE_HEIGHT = 100;
         let canvas,
           canvasContext,
           ballX = 50,
-          ballSpeedX = 5;
+          ballY = 50,
+          ballSpeedX = 10,
+          ballSpeedY = 4,
+          paddle1Y = 250,
+          paddle2Y = 250;
 
         window.addEventListener('load', function load(event) {
           canvas = document.getElementById('gameCanvas');
@@ -24,13 +29,16 @@
 
         function moveEverything() {
           ballX += ballSpeedX;
+          ballY += ballSpeedY;
+
           if (ballX > canvas.width || ballX < 0) ballSpeedX = -ballSpeedX;
+          if (ballY > canvas.height || ballY < 0) ballSpeedY = -ballSpeedY;
         }
 
         function drawEverything() {
           colourRect(0, 0, canvas.width, canvas.height, 'black');
-          colourRect(0, 210, 10, 100, 'white');
-          colourCircle(ballX, 150, 10, 'white');
+          colourRect(0, paddle1Y, 10, PADDLE_HEIGHT, 'white');
+          colourCircle(ballX, ballY, 10, 'white');
         }
 
         function colourRect(leftX, topY, width, height, colour) {
