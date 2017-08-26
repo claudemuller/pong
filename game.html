@@ -6,7 +6,8 @@
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
     <script>
-        const PADDLE_HEIGHT = 100;
+        const PADDLE_HEIGHT = 100,
+          PADDLE_WIDTH = 10;
         let canvas,
           canvasContext,
           ballX = 50,
@@ -37,8 +38,8 @@
 
         function drawEverything() {
           colourRect(0, 0, canvas.width, canvas.height, 'black');
-          colourRect(0, paddle1Y, 10, PADDLE_HEIGHT, 'white');
-          colourCircle(ballX, ballY, 10, 'white');
+          colourRect(0, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
+          colourCircle(ballX, ballY, PADDLE_WIDTH, 'white');
         }
 
         function colourRect(leftX, topY, width, height, colour) {
