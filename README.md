@@ -1,2 +1,2 @@
 # Pong
-Pong clone in JavaScript
+Pong clone written in JavaScript
