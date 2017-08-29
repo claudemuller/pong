@@ -1,8 +1,8 @@
 'use strict';
 
 function Ball(x, y) {
-  let speedX = 1,
-    speedY = 1;
+  let speedX = 10,
+    speedY = 4;
 
   return {
     x,
