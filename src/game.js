@@ -125,7 +125,7 @@ const game = {
       colourRect(this.canvasContext, this.canvas.width / 2 - 1, i, 2, 20, 'white');
     }
   }
-}
+};
 
 function colourRect(canvasContext, leftX, topY, width, height, colour) {
   canvasContext.fillStyle = colour;
