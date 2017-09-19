@@ -128,18 +128,18 @@
     }
   };
 
+  function colourRect(canvasContext, leftX, topY, width, height, colour) {
+    canvasContext.fillStyle = colour;
+    canvasContext.fillRect(leftX, topY, width, height);
+  }
+
+  function colourCircle(canvasContext, x, y, radius, colour) {
+    canvasContext.fillStyle = colour;
+    canvasContext.beginPath();
+    canvasContext.arc(x, y, radius, 0, Math.PI * 2, true);
+    canvasContext.fill();
+  }
+
   global.game = game;
 })(window);
-
-function colourRect(canvasContext, leftX, topY, width, height, colour) {
-  canvasContext.fillStyle = colour;
-  canvasContext.fillRect(leftX, topY, width, height);
-}
-
-function colourCircle(canvasContext, x, y, radius, colour) {
-  canvasContext.fillStyle = colour;
-  canvasContext.beginPath();
-  canvasContext.arc(x, y, radius, 0, Math.PI * 2, true);
-  canvasContext.fill();
-}
 
