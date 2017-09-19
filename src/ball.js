@@ -1,13 +1,18 @@
-'use strict';
+(function (global) {
+  'use strict';
 
-function Ball(x, y) {
-  let speedX = 10,
-    speedY = 4;
+  function Ball(x, y) {
+    let speedX = 10,
+      speedY = 4;
 
-  return {
-    x,
-    y,
-    speedX,
-    speedY
+    return {
+      x,
+      y,
+      speedX,
+      speedY
+    }
   }
-}
+
+  global.Ball = Ball;
+})(window);
+
