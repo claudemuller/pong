@@ -13,9 +13,9 @@
       this.canvas = document.getElementById('gameCanvas');
       this.canvasContext = this.canvas.getContext('2d');
 
-      this.paddle1 = Paddle(0, this.canvas.height / 2 - PADDLE_HEIGHT / 2);
-      this.paddle2 = Paddle(this.canvas.width - PADDLE_WIDTH, this.canvas.height / 2 - PADDLE_HEIGHT / 2),
-        this.ball = Ball(this.canvas.width / 2, this.canvas.height / 2);
+      this.paddle1 = paddle(0, this.canvas.height / 2 - PADDLE_HEIGHT / 2);
+      this.paddle2 = paddle(this.canvas.width - PADDLE_WIDTH, this.canvas.height / 2 - PADDLE_HEIGHT / 2),
+        this.ball = ball(this.canvas.width / 2, this.canvas.height / 2);
 
       window.addEventListener('load', this.load.bind(this));
     },
