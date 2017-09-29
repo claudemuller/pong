@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  function Paddle(x, y) {
+  function paddle(x, y) {
     let speedY = 0;
 
     return {
