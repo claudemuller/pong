@@ -13,9 +13,9 @@
       this.canvas = document.getElementById('gameCanvas');
       this.canvasContext = this.canvas.getContext('2d');
 
-      this.paddle1 = paddle(0, this.canvas.height / 2 - PADDLE_HEIGHT / 2);
-      this.paddle2 = paddle(this.canvas.width - PADDLE_WIDTH, this.canvas.height / 2 - PADDLE_HEIGHT / 2),
-        this.ball = ball(this.canvas.width / 2, this.canvas.height / 2);
+      this.paddle1 = global.paddle(0, this.canvas.height / 2 - PADDLE_HEIGHT / 2);
+      this.paddle2 = global.paddle(this.canvas.width - PADDLE_WIDTH, this.canvas.height / 2 - PADDLE_HEIGHT / 2),
+        this.ball = global.ball(this.canvas.width / 2, this.canvas.height / 2);
 
       window.addEventListener('load', this.load.bind(this));
     },
@@ -141,5 +141,5 @@
   }
 
   global.game = game;
-})(window);
+})(window.PONG = window.PONG || {});
 

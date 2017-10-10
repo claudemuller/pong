@@ -13,6 +13,6 @@
     }
   }
 
-  global.Ball = Ball;
-})(window);
+  global.ball = ball;
+})(window.PONG = window.PONG || {});
 

@@ -11,5 +11,5 @@
     }
   }
 
-  global.Paddle = Paddle;
-})(window);
+  global.paddle = paddle;
+})(window.PONG = window.PONG || {});
